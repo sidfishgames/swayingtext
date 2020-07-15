@@ -1,0 +1,20 @@
+/// @description Swaying Text
+
+var x_offset						= 20;
+var x_offset_duration		= 9;
+var scale								= 0.1;
+var scale_duration			= 5;
+var rotation						= 5;
+var rotation_duration		= 7;
+
+
+draw_sprite_ext
+	(sprite_index
+	,image_index
+	,scr_wave(x - x_offset, x + x_offset, x_offset_duration)
+	,y
+	,scr_wave(1 - scale, 1 + scale, scale_duration)
+	,scr_wave(1 - scale, 1 + scale, scale_duration)
+	,scr_wave(-rotation, rotation, rotation_duration)
+	,c_white
+	,1);
